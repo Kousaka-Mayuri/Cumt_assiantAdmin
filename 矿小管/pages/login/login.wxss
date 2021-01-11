@@ -1,0 +1,62 @@
+.page{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.picture_container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 50rpx;
+  align-items: center;
+  justify-content: center;
+  width:200rpx;
+  height:500rpx;
+}
+
+.studentNum{
+  display:flex;
+  flex-direction:column;
+  background-color:#f3f3f3;
+  width:600rpx;
+  height:80rpx;
+  border: 10rpx solid #f3f3f3;
+  border-radius:80rpx;
+  justify-content: center;
+  align-items:center
+}
+
+.password{
+  margin-top:60rpx;
+  display:flex;
+  flex-direction:column;
+  background-color:#f3f3f3;
+  width:600rpx;
+  height:80rpx;
+  border: 10rpx solid #f3f3f3;
+  border-radius:80rpx;
+  justify-content:center;
+  align-items:center
+}
+
+.buttonScr{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  width:100%
+}
+
+.button{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:120rpx;
+  border:0rpx solid #00dc9c;
+  border-radius:80rpx;
+  height:80rpx;
+  width:450rpx;
+  background-color:#00dc9c;
+}

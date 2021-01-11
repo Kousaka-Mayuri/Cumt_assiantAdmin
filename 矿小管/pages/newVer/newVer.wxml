@@ -1,0 +1,14 @@
+<view class = "container">
+  <text style="margin-top:10rpx;margin-bottom:40rpx">版本推送，请谨慎</text>
+<view class ="textContainer"> 
+<input class="input" type="text" placeholder="版本号" placeholder-style="text-align:center" bindinput="inputVersion"></input>
+</view> 
+<view class ="textContainer"> 
+<input class="input" type="text" placeholder="apk地址" placeholder-style="text-align:center" bindinput="inputUrl"></input>
+</view> 
+<view class ="textArea"> 
+<textarea placeholder="新版本描述" placeholder-style="text-align:center" bindinput="inputDes"></textarea>
+</view> 
+ <switch type="checkbox" checked="{{isClicked}}" bindchange ="changeUp">强制更新？</switch>
+<button style="margin-top:40rpx" bindtap="confirm">推送</button>
+</view>

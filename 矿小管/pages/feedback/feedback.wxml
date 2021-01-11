@@ -1,0 +1,25 @@
+<view class="all">
+<scroll-view  scroll-y="true" enhanced="true" show-scrollbar="false">
+  <view style="margin-top:10rpx"  wx:for="{{feedback}}" wx:key="id">
+    <view class = "backgroud-float" style="background-color:{{viewBg}}" bindtap="itemSelected" data-index="{{index}}">
+    <view class="box"><view > <image class='select_icon' src="{{item.isSelected?'/images/selected.png':'/images/unselected.png'}}"></image></view>
+      <view class="feedText">  <rich-text nodes="{{item.data}}"></rich-text></view>
+</view>
+</view>
+  </view>
+<view style="height:100%;display:flex;flex-direction:column">
+<view style="display:flex;flex-direction:row">
+<button style="margin-top:40rpx" bindtap="minsPage">上一页</button>
+<button style="margin-top:40rpx" bindtap="plusPage">下一页</button>
+</view>
+<view style="display:flex;margin-bottom:0rpx">
+  <button class="delete_button" bindtap="deleData">确认删除</button>
+</view>
+<text>总反馈数：{{numAll}}|当前页码：{{page}}|总页数：{{pageAll}}</text>
+<view class="inputCon">
+  <input class="input" bindinput="jumppage" placeholder="输入跳转页面，无需确认"></input>
+</view>
+
+</view>
+</scroll-view>
+</view>

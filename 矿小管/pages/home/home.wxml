@@ -1,0 +1,11 @@
+<page class="page">
+<view class = "all">
+  <text class = "nameSty">欢迎您，{{name}}</text>
+  <text class="nameSty" style="font-size:25rpx">请选择您需要的操作，如果出现名字未出现的现象，需要重新登录</text>
+  <view class = "buttonCon">
+    <button class="button" bindtap="goNewVer"><text class="textSty">发布新版本</text></button>
+  <button class="button" bindtap="goDeleUser"><text class="textSty">删除用户</text></button>
+  <button class="button" bindtap="logout"><text class="textSty">退出登录</text></button>
+  </view>
+  </view>
+</page>

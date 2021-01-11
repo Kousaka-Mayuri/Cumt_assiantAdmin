@@ -1,0 +1,6 @@
+<view class = "page">
+  <input class="input" placeholder="请输入要删除的用户id号" bindinput="inputId"></input>
+  <view style="margin-top:100rpx"> 
+    <button class="button" bindtap="confirm">确认删除</button>
+  </view>
+</view>

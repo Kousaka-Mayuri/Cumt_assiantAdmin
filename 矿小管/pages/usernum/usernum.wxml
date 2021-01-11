@@ -1,0 +1,20 @@
+<view class="all">
+  <view class="line" wx:for="{{chuserList}}" wx:key="id">
+    <view class="box" data-index="{{index}}">
+      <text>学号:{{item.username}} 权限:{{item.perName}}</text>
+</view>
+</view>
+<view style="display:flex;flex-direction:row">
+<button style="border:10rpx solid #ffffff;border-radius:40rpx" bindtap="minsPage">上一页</button>
+<button style="border:10rpx solid #ffffff;border-radius:40rpx" bindtap="plusPage">下一页</button>
+</view>
+<view style="display:flex;flex-direction:row">
+  <text>当前注册总人数：{{userAll}}</text>
+  <text style="justify-content:end;align-items:end">|当前页码：{{page}}</text>
+  <text >|总页数：{{pageAll}}</text>
+</view>
+<view class="inputCon">
+  <input class="input" bindinput="jumppage" placeholder="输入跳转页面，无需确认"></input>
+</view>
+
+</view>

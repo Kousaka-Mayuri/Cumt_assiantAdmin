@@ -1,0 +1,37 @@
+<view class = "page">
+<text>平台占比：</text>
+<view style="height:240rpx;width:100%;display:flex;flex-direction:row">
+  <canvas canvas-id="userPla" style="width:350rpx;height:240rpx;"></canvas>
+  <view style="width:400rpx;height:240rpx;display:flex;flex-direction:column;">
+  <text class = "verText" style="color:#CCCCFF">安卓用户:{{plaList[1]}}</text>
+  <text style="color:#CCCCFF">占比：{{iosPer}}</text>
+  <text class="verText" style="color:#99CCFF">苹果用户:{{plaList[0]}}</text>
+  <text style="color:#99CCFF">占比：{{andPer}}</text>
+  </view>
+</view>
+<view wx:for="{{userVerList}}">
+  <view class="box" data-index="{{index}}">
+      <text>学号:{{item.username}} 版本:{{item.version}} 平台:{{item.platform}}</text>
+</view>
+</view>
+<view style="display:flex;flex-direction:row">
+<button style="border:10rpx solid #ffffff;border-radius:40rpx" bindtap="minsPage">上一页</button>
+<button style="border:10rpx solid #ffffff;border-radius:40rpx" bindtap="plusPage">下一页</button>
+</view>
+<view style="display:flex;flex-direction:row">
+  <text style="justify-content:end;align-items:end">总页数：{{pageAll}}|当前页码：{{page}}|总人数：{{numAll}}</text>
+</view>
+<view class = "inputCon">
+  <input class="input" bindinput="jumppage" placeholder="输入跳转页面，无需确认"></input>
+</view>
+</view>
+<text>版本占比：</text>
+<view style="height:240rpx;width:100%;display:flex;flex-direction:row">
+  <canvas canvas-id="verNum" style="width:350rpx;height:240rpx;"></canvas>
+  <view style="width:400rpx;height:240rpx;display:flex;flex-direction:column;">
+    <view style="margin-top:10rpx;display:flex;flex-direction:column" wx:for="{{version}}" data-index="{{index}}">
+      <text class = "verText" style="{{item.color}}" >{{item.version}}版本人数:{{item.num}}</text>
+      <text style="{{item.color}}" >{{item.version}}版本占比:{{item.percent}}</text>
+    </view>
+  </view>
+</view>
